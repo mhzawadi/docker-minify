@@ -1,6 +1,6 @@
 #!/bin/sh
 
-find find . -type f \( -name '*.css' -or -name '*.js' \) |
+find . -type f \( -name '*.css' -or -name '*.js' \) |
 grep -v -e '\.min\.' |
 while read FILE
 do
