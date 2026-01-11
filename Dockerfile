@@ -8,8 +8,8 @@ RUN apk update && \
 	&& mkdir -p /run/nginx \
 	&& rm -f /var/cache/apk/*;
 
-COPY . .
 WORKDIR /var/www/html
+COPY . .
 
 RUN composer require matthiasmullie/minify;
 
