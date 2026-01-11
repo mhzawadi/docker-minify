@@ -7,9 +7,9 @@ $bits = pathinfo($argv[1]);
 use MatthiasMullie\Minify;
 
   $sourcePath = $argv[1];
-  if( $extension['extension'] ==='css' ){
+  if( $bits['extension'] ==='css' ){
     $minifier = new Minify\CSS($sourcePath);
-  }elseif( $extension['extension'] ==='js' ){
+  }elseif( $bits['extension'] ==='js' ){
     $minifier = new Minify\JS($sourcePath);
   }else{
     echo $argv[1].' is not a CSS or a JS file';
@@ -17,5 +17,5 @@ use MatthiasMullie\Minify;
   }
 
   // save minified file to disk
-  $minifiedPath = "$bits['filename'].min.$bits['extension']";
+  $minifiedPath = $bits['filename'].'.min.'.$bits['extension'];
   $minifier->minify($minifiedPath);
