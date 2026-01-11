@@ -6,4 +6,5 @@ while read FILE
 do
   echo "minify ${FILE}"
   php /var/www/html/minify.php "${FILE}"
+  echo '' >> "${FILE}"
 done
