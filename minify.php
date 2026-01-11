@@ -17,5 +17,5 @@ use MatthiasMullie\Minify;
   }
 
   // save minified file to disk
-  $minifiedPath = $bits['filename'].'.min.'.$bits['extension'];
+  $minifiedPath = $bits['dirname'].'/'.$bits['filename'].'.min.'.$bits['extension'];
   $minifier->minify($minifiedPath);
