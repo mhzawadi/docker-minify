@@ -13,4 +13,4 @@ COPY . .
 
 RUN composer require matthiasmullie/minify;
 
-ENTRYPOINT ["php", "minify.php"]
+ENTRYPOINT ["/var/www/html/start.sh"]

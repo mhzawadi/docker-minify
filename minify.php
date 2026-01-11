@@ -2,20 +2,20 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-$bits = explode('.', $argv[1]);
+$bits = pathinfo($argv[1]);
 
 use MatthiasMullie\Minify;
 
   $sourcePath = $argv[1];
-  if( $bits[1] ==='css' ){
+  if( $extension['extension'] ==='css' ){
     $minifier = new Minify\CSS($sourcePath);
-  }elseif( $bits[1] ==='js' ){
+  }elseif( $extension['extension'] ==='js' ){
     $minifier = new Minify\JS($sourcePath);
   }else{
-    echo 'Not a CSS or a JS file';
+    echo $argv[1].' is not a CSS or a JS file';
     exit(1);
   }
 
   // save minified file to disk
-  $minifiedPath = "$bits[0].min.$bits[1]";
+  $minifiedPath = "$bits['filename'].min.$bits['extension']";
   $minifier->minify($minifiedPath);
