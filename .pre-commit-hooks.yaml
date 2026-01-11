@@ -1,15 +1,4 @@
--   id: ansible-lint
-    name: ansible-lint
-    description: This hook runs ansible-lint
-    entry: testing/lint.sh
-    language: script
-    pass_filenames: false
-    always_run: true
-    verbose: true
--   id: molecule-test
-    name: molecule-test
-    description: This hook runs molecule test
-    entry: testing/molecule.sh
-    language: script
-    pass_filenames: false
-    always_run: true
+-   id: minify-css-js
+    name: minify-css-js
+    language: docker_image
+    entry: hub.docker.com/mhzawadi/docker-minify
