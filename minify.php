@@ -20,5 +20,5 @@ use MatthiasMullie\Minify;
   $minifier->minify($bits['dirname'].'/'.$bits['filename'].'.min.'.$bits['extension']);
   $minifier->gzip($bits['dirname'].'/'.$bits['filename'].'.min.gz');
   $myfile = fopen($bits['dirname'].'/'.$bits['filename'].'.min.'.$bits['extension'], "a") or die("Unable to open file!");
-  fwrite($myfile, "");
+  fwrite($myfile, "\n");
   fclose($myfile);
