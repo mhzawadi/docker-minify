@@ -1,4 +1,4 @@
 -   id: minify-css-js
     name: minify-css-js
     language: docker_image
-    entry: hub.docker.com/mhzawadi/docker-minify
+    entry: hub.docker.com/r/mhzawadi/docker-minify:latest
