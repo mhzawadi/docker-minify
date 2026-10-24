@@ -1,9 +1,9 @@
-FROM alpine:3.23
+FROM alpine:3.24
 LABEL org.opencontainers.image.authors="Matthew Horwood <matt@horwood.biz>"
 
 # Install required apk packages
 RUN apk update && \
-	apk add php84 composer \
+	apk add php85 composer \
 	&& mkdir -p /var/www/html/ \
 	&& mkdir -p /run/nginx \
 	&& rm -f /var/cache/apk/*;
